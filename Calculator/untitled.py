@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setGeometry(QtCore.QRect(20, 20, 411, 91))
         self.lineEdit.setObjectName("lineEdit")
         self.formLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(270, 130, 161, 111))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(270, 130, 161, 112))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
@@ -93,7 +93,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.pushButton_7.clicked.connect(self.lineEdit.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -102,7 +101,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "-"))
         self.pushButton_3.setText(_translate("MainWindow", "/"))
         self.pushButton_2.setText(_translate("MainWindow", "*"))
-        self.pushButton_4.setText(_translate("MainWindow", "sqrt"))
+        self.pushButton_4.setText(_translate("MainWindow", "Ans"))
         self.pushButton_6.setText(_translate("MainWindow", "="))
         self.pushButton_7.setText(_translate("MainWindow", "C"))
         self.pushButton.setText(_translate("MainWindow", "+"))

@@ -30,7 +30,7 @@
       <x>270</x>
       <y>130</y>
       <width>161</width>
-      <height>111</height>
+      <height>112</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -58,7 +58,7 @@
      <item row="2" column="0">
       <widget class="QPushButton" name="pushButton_4">
        <property name="text">
-        <string>sqrt</string>
+        <string>Ans</string>
        </property>
       </widget>
      </item>
@@ -181,22 +181,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton_7</sender>
-   <signal>clicked()</signal>
-   <receiver>lineEdit</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>311</x>
-     <y>244</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>350</x>
-     <y>124</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

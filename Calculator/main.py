@@ -18,6 +18,7 @@ class mywindow(QtWidgets.QMainWindow):
         self.ui.pushButton_4.clicked.connect(self.btnClicked_4)
         self.ui.pushButton_5.clicked.connect(self.btnClicked_5)
         self.ui.pushButton_6.clicked.connect(self.btnClicked_6)
+        self.ui.pushButton_7.clicked.connect(self.btnClicked_7)
         self.ui.pushButton_8.clicked.connect(self.btnClicked_8)
         self.ui.pushButton_9.clicked.connect(self.btnClicked_9)
         self.ui.pushButton_10.clicked.connect(self.btnClicked_10)
@@ -44,7 +45,7 @@ class mywindow(QtWidgets.QMainWindow):
 
     def btnClicked_4(self):
         self.textbox = self.ui.lineEdit.text()
-        self.ui.lineEdit.setText(self.textbox + " sqrt ")
+        self.ui.lineEdit.setText(str(result))
 
     def btnClicked_5(self):
         self.textbox = self.ui.lineEdit.text()
@@ -54,26 +55,29 @@ class mywindow(QtWidgets.QMainWindow):
         self.textbox = self.ui.lineEdit.text()
         self.ui.lineEdit.setText(self.textbox + " = ")
         term = self.textbox.split( )
-        if term[1] == '+':
-            self.textbox = self.ui.lineEdit.text()
-            self.ui.lineEdit.setText(self.textbox + str(int(term[0])+int(term[2])))
+        global result
+        result = int(term[0])
+        for i in range(1, len(term), 2):
+            if term[i] == '+':
+                result = result + int(term[i+1])
 
-        if term[1] == '-':
-            self.textbox = self.ui.lineEdit.text()
-            self.ui.lineEdit.setText(self.textbox + str(int(term[0])-int(term[2])))
+            if term[i] == '-':
+                result = result - int(term[i+1])
 
-        if term[1] == '*':
-            self.textbox = self.ui.lineEdit.text()
-            self.ui.lineEdit.setText(self.textbox + str(int(term[0])*int(term[2])))
+            if term[i] == '*':
+                result = result * int(term[i+1])
 
-        if term[1] == '/':
-            self.textbox = self.ui.lineEdit.text()
-            self.ui.lineEdit.setText(self.textbox + str(int(term[0])/int(term[2])))
+            if term[i] == '/':
+                result = result / int(term[i+1])
 
-        if term[0] == 'sqrt':
-            self.textbox = self.ui.lineEdit.text()
-            self.ui.lineEdit.setText(self.textbox + str(sqrt(int(term[1]))))
+        self.textbox = self.ui.lineEdit.text()
+        self.ui.lineEdit.setText(self.textbox + str(result))
 
+    def btnClicked_7(self):
+        self.textbox = self.ui.lineEdit.text()
+        self.ui.lineEdit.setText("")
+        global result
+        result = 0
 
     def btnClicked_8(self):
         self.textbox = self.ui.lineEdit.text()
